@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 // import './NewTodoForm.css';
 
-const NewTodoForm = () => {
+import { connect } from 'react-redux';
+import { creatTodo } from './acitons';
+
+const NewTodoForm = ({ todos }) => {
     const [inputValue, setInputValue] = useState('');
 
     return (
@@ -12,4 +15,12 @@ const NewTodoForm = () => {
     );
 };
 
-export default NewTodoForm;
+const mapStateToProps = state => ({
+    todos: state.todos,
+});
+
+const mapDispatchToProps = dispatch => ({
+    
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewTodoForm);
