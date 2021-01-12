@@ -26,6 +26,8 @@ export const todos = (state = [], action) => {
 
         case CHANGE_TODO: {
 
+            // if state is not an array --> error handling is needed
+
             //const { text } = payload;
             return state = state.reverse();
 
