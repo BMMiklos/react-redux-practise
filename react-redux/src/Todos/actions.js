@@ -11,3 +11,10 @@ export const removeTodo = text => ({
     type: REMOVE_TODO,
     payload: { text }
 });
+
+export const CHANGE_TODO = 'CHANGE_TODO';
+
+export const changeTodo = () => ({
+    type: CHANGE_TODO,
+});
+
